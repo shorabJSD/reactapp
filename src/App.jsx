@@ -14,6 +14,9 @@ const showAlert = (massage, type)=>{
       msg:massage,
       type:type,
     });
+    setTimeout(() => {
+      setAlert(null);
+    }, 3000);
 }
 
 // Dark and light switch mode event;
@@ -33,7 +36,7 @@ const toggleMode = ()=>{
       <Navbar navTitle="Navbar" about="About" mode={mode} toggleMode={toggleMode}/>
       <Alert showAlert={showAlert} alert={alert}/>
       <div className="container">
-        <TextForm mode={mode}/>
+        <TextForm mode={mode} showAlert={showAlert}/>
       </div>
     </>
   )

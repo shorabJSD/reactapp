@@ -7,6 +7,7 @@ export default function TextForm(props){
     const handleToUppercase = ()=>{
         let newText = text.toUpperCase();
         setText(newText);
+        showAlert("Text has changed to uppercase.", "success");
     };
      // creating a function to make to lowerCase to upperCase; 
     const handleToLowercase = ()=>{
