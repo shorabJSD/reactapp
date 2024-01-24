@@ -51,14 +51,16 @@ export default function Navbar(props) {
 
 
 
-Navbar.propTypes = {
-    navTitle:PropTypes.string,
+Navbar.PropTypes= {
     about:PropTypes.string,
-  };
+    home:PropTypes.number,
+    title:PropTypes.
+}
 
-// Navbar.defaultProps ={
-//   navTitle:"setDefault title",
-//   about:"defaultAbout",
-// }
+
+
+
+
+
 
 

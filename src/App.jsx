@@ -2,7 +2,12 @@ import { useState } from 'react';
 import './App.css';
 import Navbar from './components/Navbar.jsx';
 import TextForm from './components/TextForm.jsx';
-import Alert from './components/Alert.jsx';
+import Alert from './components/Alert.jsx';  
+
+
+
+
+
 
 
 
@@ -30,7 +35,7 @@ const toggleMode = ()=>{
     document.body.style.backgroundColor = "white";
     showAlert("Light has enabled.", "success");//switch light mode;
   }
-}
+} 
   return (
     <>
       <Navbar navTitle="Navbar" about="About" mode={mode} toggleMode={toggleMode}/>
