@@ -54,7 +54,8 @@ export default function Navbar(props) {
 Navbar.PropTypes= {
     about:PropTypes.string,
     home:PropTypes.number,
-    title:PropTypes.
+    title:PropTypes.number,
+    title:PropTypes.string,
 }
 
 
