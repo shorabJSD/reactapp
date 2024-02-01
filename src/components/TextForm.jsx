@@ -50,6 +50,7 @@ export default function TextForm(props){
       </div>
       <h1>Text:</h1>
       <p>{text.length>0?text:"Enter your text in the box about preview here it"}</p>
+      <p className='text'> {text.split(" ").filter((ele)=>{return ele.length!=0}).length} Words: {text.length}</p>
     </div>
     </>
   )
