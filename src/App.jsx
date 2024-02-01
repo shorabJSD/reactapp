@@ -41,7 +41,7 @@ const toggleMode = ()=>{
       <Navbar navTitle="Navbar" about="About" mode={mode} toggleMode={toggleMode}/>
       <Alert showAlert={showAlert} alert={alert}/>
       <div className="container">
-        <TextForm mode={mode} showAlert={showAlert}/>
+        <TextForm mode={mode} showAlert={showAlert} textFormTitle="Text utiles for making text uppercase to lowercase, extra space remove, text copy, text clear"/>
       </div>
     </>
   )

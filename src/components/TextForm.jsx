@@ -38,18 +38,18 @@ export default function TextForm(props){
     <>
     <div className="container" style={{color:props.mode==='dark'?'white':'black'}}>
       <div className="my-4">
-        <h2 style={{color:props.mode==='dark'?'white':'black'}}>Text Area</h2>
+        <h2 className='mb-5' style={{color:props.mode==='dark'?'white':'black'}}>{props.textFormTitle}</h2>
         <textarea className="form-control" onChange={handleChangeText} style={{color:props.mode==='dark'?'white':'black', backgroundColor:props.mode==="dark"?'#1e1e1e':"white"}}  value={text} id="myTextArea" rows="8"></textarea>
       </div>
       <div className="container my-3">
-          <button onClick={handleToUppercase} onChange={handleChangeText}  className="btn btn-primary mx-2">to upercase</button>
-          <button onClick={handleToLowercase} onChange={handleChangeText}  className="btn btn-secondary">to lowercase</button>
-          <button onClick={handleToClear} onChange={handleChangeText}  className="btn btn-danger mx-2">clear</button>
-          <button onClick={handleTextCopy} onChange={handleChangeText}  className="btn btn-success mx-2">Copy Text</button>
-          <button onClick={handleTextSapce} onChange={handleChangeText}  className="btn btn-info mx-2">remove extra space</button>
+          <button disabled={text.length===0} onClick={handleToUppercase} onChange={handleChangeText}  className="btn btn-primary mx-2">to upercase</button>
+          <button disabled={text.length===0} onClick={handleToLowercase} onChange={handleChangeText}  className="btn btn-secondary">to lowercase</button>
+          <button disabled={text.length===0} onClick={handleToClear} onChange={handleChangeText}  className="btn btn-danger mx-2">clear</button>
+          <button disabled={text.length===0} onClick={handleTextCopy} onChange={handleChangeText}  className="btn btn-success mx-2">Copy Text</button>
+          <button disabled={text.length===0} onClick={handleTextSapce} onChange={handleChangeText}  className="btn btn-info mx-2">remove extra space</button>
       </div>
       <h1>Text:</h1>
-      <p>{text.length>0?text:"Enter your text in the box about preview here it"}</p>
+      <p>{text.length>0?text:"Nothing to preview"}</p>
       <p className='text'> {text.split(" ").filter((ele)=>{return ele.length!=0}).length} Words: {text.length}</p>
     </div>
     </>
