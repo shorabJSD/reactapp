@@ -24,15 +24,29 @@ const showAlert = (massage, type)=>{
     }, 3000);
 }
 
+const bodyBgRemove = ()=>{
+  document.body.classList.remove('bg-danger')
+  document.body.classList.remove('bg-success')
+  document.body.classList.remove('bg-primary')
+  document.body.classList.remove('bg-light')
+  document.body.classList.remove('bg-warning')
+  document.body.classList.remove('bg-ligth');
+  document.body.classList.remove('bg-dark');
+}
 // Dark and light switch mode event;
-const toggleMode = ()=>{
+const toggleMode = (cls)=>{
+  bodyBgRemove()
+  // console.log(cls);
+  // console.log(toggleMode);
+  document.body.classList.add('bg-' + cls)
+
   if (mode==='light') {
     setMode("dark");
-    document.body.style.backgroundColor = "#010824";
+    document.body.classList.backgroundColor = "#010824";
     showAlert("Dark mode has enabled.", "success") //switch dark mode;
   }else{
     setMode("light");
-    document.body.style.backgroundColor = "white";
+    document.body.classList.backgroundColor = "white";
     showAlert("Light has enabled.", "success");//switch light mode;
   }
 } 
@@ -45,7 +59,7 @@ const toggleMode = ()=>{
       </div>
     </>
   )
-}
+} 
 
 export default App
 

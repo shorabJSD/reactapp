@@ -7,27 +7,31 @@ export default function TextForm(props){
     const handleToUppercase = ()=>{
         let newText = text.toUpperCase();
         setText(newText);
-        showAlert("Text has changed to uppercase.", "success");
+        props.showAlert("Text has changed to uppercase.", "success");
     };
      // creating a function to make to lowerCase to upperCase; 
     const handleToLowercase = ()=>{
         let lower = text.toLowerCase();
         setText(lower);
+        props.showAlert("Text has changed to lowercase.", "success");
     };
      // creating a function to copy text;
     const handleTextCopy = ()=>{
         let text = document.getElementById("myTextArea");
         text.select();
         navigator.clipboard.writeText(text.value);
+        props.showAlert("Text has copied.", "success");
     }
     // function, clear text into the textarea;
     const handleToClear = ()=>{
       setText("");
+      props.showAlert("Text has cleared.", "success");
     }
     // space reomve model of text;
     const handleTextSapce = ()=>{
       let spaceRemover = text.split(/[ ]+/);
       setText(spaceRemover.join(" "));
+      props.showAlert("Text has cleared the all extra spaces.", "success");
     }
     // onChange handle;
    const handleChangeText = (event)=>{
