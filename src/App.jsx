@@ -43,6 +43,7 @@ const toggleMode = (cls)=>{
   if (mode==='light') {
     setMode("dark");
     document.body.classList.backgroundColor = "#010824";
+    document.navLink.classList.color = "light";
     showAlert("Dark mode has enabled.", "success") //switch dark mode;
   }else{
     setMode("light");
